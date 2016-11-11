@@ -1,0 +1,10 @@
+body{
+	margin: 0;
+	padding: 40px 0;
+}
+#species{
+	display: block;
+}
+.selector{
+	margin: 50px 0;
+}

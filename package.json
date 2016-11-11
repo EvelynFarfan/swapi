@@ -1,0 +1,19 @@
+{
+  "name": "starwars-api",
+  "version": "1.0.0",
+  "description": "star-wars-api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "ajax",
+    "swapi"
+  ],
+  "author": "Evelyn Farfan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
