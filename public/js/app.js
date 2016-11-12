@@ -14,7 +14,7 @@ var template = '<div class="col s12 m4">' +
 $(document).ready(function(){
 	var formatSpecie = function(response){
 		$.each(response.results, function(i, especie){
-			var urlPeople = "http://swapi.co/api/people/";
+			var urlPeople = "https://swapi.co/api/people/";
 			var urls = especie.people;
 			var numUrl = "";
 			$.each(especie.people, function(i, link){
@@ -33,11 +33,10 @@ $(document).ready(function(){
 	};
 
 	$("#species").change(function(e) {	
-		var cadena = $(this).val();
-		var newCadena = cadena.split(",");
+		var array = ($(this).val()).split(",");
 		$("#people").html("");
-		for (var i = 0; i < newCadena.length; i++) { 
-			var newLink = "https://swapi.co/api/people/"	+ newCadena[i] + "/";
+		for (var i = 0; i < array.length; i++) { 
+			var newLink = "https://swapi.co/api/people/"	+ array[i] + "/";
 			$.getJSON(newLink, cardsEspecie);
 		}
 	}); 
