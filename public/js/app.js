@@ -14,7 +14,7 @@ var template = '<div class="col s12 m4">' +
 $(document).ready(function(){
 	var formatSpecie = function(response){
 		$.each(response.results, function(i, especie){
-			var urlPeople = "https://swapi.co/api/people/";
+			var urlPeople = "http://swapi.co/api/people/";
 			var urls = especie.people;
 			var numUrl = "";
 			$.each(especie.people, function(i, link){
