@@ -33,7 +33,7 @@ $(document).ready(function(){
 	};
 
 	$("#species").change(function(e) {	
-		var array = $(this).val().split(",");
+		var array = ($(this).val()).split(",");
 		$("#people").html("");
 		for (var i = 0; i < array.length; i++) { 
 			var newLink = "http://swapi.co/api/people/"	+ array[i] + "/";
