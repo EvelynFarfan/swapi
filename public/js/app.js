@@ -33,10 +33,11 @@ $(document).ready(function(){
 	};
 
 	$("#species").change(function(e) {	
-		var array = ($(this).val()).split(",");
+		var cadena = $(this).val();
+		var newCadena = cadena.split(",");
 		$("#people").html("");
-		for (var i = 0; i < array.length; i++) { 
-			var newLink = "//swapi.co/api/people/"	+ array[i] + "/";
+		for (var i = 0; i < newCadena.length; i++) { 
+			var newLink = "//swapi.co/api/people/"	+ newCadena[i].split(":")[1];
 			$.getJSON(newLink, cardsEspecie);
 		}
 	}); 
