@@ -37,8 +37,8 @@ $(document).ready(function(){
 		var newCadena = cadena.split(",");
 		$("#people").html("");
 		for (var i = 0; i < newCadena.length; i++) { 
-/*			var newLink = "http://swapi.co/api/people/"	+ newCadena[i].split(":")[1];*/
-			$.getJSON("https://swapi.co/api/people/"	+ newCadena[i].split(":")[1], cardsEspecie);
+			var newLink = "https://swapi.co/api/people/"	+ newCadena[i] + "/";
+			$.getJSON(newLink, cardsEspecie);
 		}
 	}); 
 });
